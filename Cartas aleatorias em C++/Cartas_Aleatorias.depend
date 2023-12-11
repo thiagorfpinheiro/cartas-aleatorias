@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1654231015 source:c:\users\thiago\dropbox\curso analise e desenvolvimento de sistemas\semestre 2\programacao orientada a objeto\projetos\cartas_aleatorias\main.cpp
+	<iostream>
+	<locale>
+	<stdlib.h>
+	<cstdlib>
+	<ctime>
+	<string>
+
