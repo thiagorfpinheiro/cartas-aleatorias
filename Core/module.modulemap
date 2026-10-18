@@ -1,0 +1,5 @@
+module CartasCore {
+    header "CartasCore.hpp"
+    requires cplusplus
+    export *
+}
