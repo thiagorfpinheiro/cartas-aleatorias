@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Cartas Aleatórias</title>
+  <meta name="description" content="Gera cartas de baralho aleatórias para treinar truques de mágica.">
+  <meta name="theme-color" content="#0b3d26">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Cartas">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" type="image/png" sizes="192x192" href="icones/icone-192.png">
+  <link rel="apple-touch-icon" href="icones/apple-touch-icon.png">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <main class="app">
+    <h1 class="titulo">Cartas Aleatórias</h1>
+
+    <div class="modos" role="radiogroup" aria-label="Modo">
+      <button type="button" role="radio" data-modo="carta">Qualquer carta</button>
+      <button type="button" role="radio" data-modo="naipe">Por naipe</button>
+      <button type="button" role="radio" data-modo="numero">Número</button>
+    </div>
+
+    <div class="naipes" role="radiogroup" aria-label="Naipe" hidden>
+      <button type="button" role="radio" data-naipe="Espadas" aria-label="Espadas"><span>♠</span></button>
+      <button type="button" role="radio" data-naipe="Copas" aria-label="Copas" class="vermelho"><span>♥</span></button>
+      <button type="button" role="radio" data-naipe="Paus" aria-label="Paus"><span>♣</span></button>
+      <button type="button" role="radio" data-naipe="Ouros" aria-label="Ouros" class="vermelho"><span>♦</span></button>
+    </div>
+
+    <div class="palco">
+      <button type="button" class="carta" aria-label="Carta virada. Toque para gerar.">
+        <div class="carta-conteudo verso" aria-hidden="true">
+          <div class="verso-moldura"></div>
+          <div class="verso-naipes"><span>♠ ♥</span><span>♣ ♦</span></div>
+        </div>
+      </button>
+    </div>
+
+    <p class="descricao" aria-live="polite">Toque na carta ou no botão</p>
+
+    <section class="historico" hidden>
+      <div class="historico-topo">
+        <h2>Histórico</h2>
+        <button type="button" class="limpar">Limpar</button>
+      </div>
+      <ol class="historico-lista"></ol>
+    </section>
+
+    <button type="button" class="gerar" disabled>Carregando…</button>
+  </main>
+
+  <noscript><p class="aviso">Este app precisa de JavaScript ativado.</p></noscript>
+</body>
+</html>
